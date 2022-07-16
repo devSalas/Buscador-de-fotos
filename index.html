@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+  <title>Document</title>
+</head>
+<body id="flechaArriba">
+  <div class="contenido">
+    <header class="header">
+      <div class="header-navbar">
+        <img class="header-navbar-img" src="./img/logo.png" alt="">
+        <div class="header-navbar-content-input"> 
+          <img class="header-navbar-img img-search" src="./img/search.png" alt="" >
+          <input class="header-navbar-input img-open" type="text" placeholder="busca algo...">
+          <img src="./img/cerrar.png" class="header-navbar-img img-delete"alt="">
+        </div>
+        
+        <!-- <img class="header-navbar-img" src="" alt=""> -->
+        <img class="header-navbar-img" src="./img/perfil.png" alt="">
+      </div> 
+    </header>
+    <div class="grid-Gruop">
+      <div class="grid-items"></div>
+      <div class="grid-items"></div>
+      <div class="grid-items"></div>
+    </div>
+  </div>
+
+  <!--btn -->
+<!--   <div class="arrows">
+    <div><img src="./img/left-arrow.png" alt=""></div>
+    <div><img src="./img/arrow-right.png" alt=""></div>
+    <div><img src="./img/flecha-arriba.png" alt=""></div>
+  </div> -->
+  <div class="arrows">
+    <img class="arrow-left" src="./img/left-arrow.png" alt="">
+    <img class="arrow-right" src="./img/arrow-right.png" alt="">
+    <a href="#flechaArriba">
+      <img class="arrow-up"  src="./img/flecha-arriba.png" alt="">
+    </a>
+  </div>
+  <footer class="footer">
+    <button class="footer-btn footer-btn-prev">anterior</button>
+    <button class="footer-btn footer-btn-next">siguiente</button>
+  </footer>
+
+  <template>
+    <div class="grid-items-item">
+      <!-- <figure> -->
+        <img class="grid-item-img" src="" alt="">
+        <figcaption></figcaption>
+      <!-- </figure>  -->
+    </div>
+  </template>
+  <script src="./app.js" type="module"></script>
+
+</body>
+</html>
