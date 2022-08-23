@@ -13,10 +13,9 @@ body{
   height:100vh;
 }
 .header-navbar{
-  background-color:#748DA6;
   display:flex;
   padding:.5rem .75rem;
-  margin-bottom: 10px;
+
   justify-content:space-between;
   align-items:center;
 }
@@ -52,9 +51,19 @@ body{
   overflow:hidden;
   padding:0px 30%;
   font-size: 1.3rem;
+  background: #EEEEEE;
 }
+
+
+.barra{
+  height: 20px;
+  margin-top: 0px;
+  background: #f3f0f0;
+}
+
+
 .img-open::placeholder{
-    color:rgba(177, 167, 167, 0.849);
+    color:rgba(138, 130, 130, 0.849);
   }
 
 .img-search{

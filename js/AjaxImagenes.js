@@ -52,6 +52,7 @@ export default async function GetImages(i=1,word){
     $fragments[n] = document.createDocumentFragment();
     const $template = document.querySelector('template').content;
     $template.querySelector("img").src=`${e.urls.regular}`
+    $template.querySelector("img").loading=`lazy`
     const clone=$template.cloneNode(true);
     $fragments[n].appendChild(clone);
     $gridItems[n].appendChild($fragments[n]);
