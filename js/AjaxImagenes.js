@@ -10,9 +10,10 @@ export default async function GetImages(i=1,word){
   $gridItems[1].innerHTML="";
   $gridItems[2].innerHTML="";
   let res;
-  
+  const $loading=d.querySelector(".container-lds-roller")
   if(word){
-    
+   
+    $loading.classList.remove("disable-loading")  
     res=await fetch(`https://api.unsplash.com/search/photos/?page=${i}&query=${word}&client_id=rwDdmvw6XL5_uTQKYB0aaAiy2VH4pcTbQi-romOTsZM&per_page=40`,{
     "Accept-Version":"v1"
     }) 
@@ -24,9 +25,14 @@ export default async function GetImages(i=1,word){
       if(n===3) n=0;
       plantillaImg(e,n)
     })  
-    return;
+    setTimeout(()=>{
+      $loading.classList.add("disable-loading") 
+    },1000)
+    return  ;
   }
+
   if(!word){
+    $loading.classList.remove("disable-loading")  
     res=await fetch(`https://api.unsplash.com/photos/?page=${i}&client_id=rwDdmvw6XL5_uTQKYB0aaAiy2VH4pcTbQi-romOTsZM&es&per_page=40`,{
     "Accept-Version":"v1"})
     const data= await res.json()
@@ -38,6 +44,10 @@ export default async function GetImages(i=1,word){
       }
       plantillaImg(e,n)
     })
+    setTimeout(()=>{
+      $loading.classList.add("disable-loading") 
+    },2000)
+    
   }
 
 
