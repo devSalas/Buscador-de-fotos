@@ -12,7 +12,15 @@ export default function searchImage(){
   const $arrowRight=d.querySelector(".arrow-right")
 
   let page=1;
-  d.addEventListener("click",(e)=>{
+
+  const $form=d.querySelector("form")
+  $form.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    let word=$input.value;
+    if(word)return GetImages(undefined,word)
+  })
+
+  const getData=(e)=>{
     let word=$input.value;
     
     if(e.target===$buscador){
@@ -45,5 +53,11 @@ export default function searchImage(){
         GetImages(page,word)
       }
     }
+  }
+
+
+  d.addEventListener("click",(e)=>{
+    getData(e)
+    console.log(e)
   })
 }

@@ -10,8 +10,7 @@ export default async function GetImages(i=1,word){
   $gridItems[1].innerHTML="";
   $gridItems[2].innerHTML="";
   let res;
-  /* console.log(a) */
-  console.log(i)
+  
   if(word){
     
     res=await fetch(`https://api.unsplash.com/search/photos/?page=${i}&query=${word}&client_id=rwDdmvw6XL5_uTQKYB0aaAiy2VH4pcTbQi-romOTsZM&per_page=40`,{
@@ -31,7 +30,6 @@ export default async function GetImages(i=1,word){
     res=await fetch(`https://api.unsplash.com/photos/?page=${i}&client_id=rwDdmvw6XL5_uTQKYB0aaAiy2VH4pcTbQi-romOTsZM&es&per_page=40`,{
     "Accept-Version":"v1"})
     const data= await res.json()
-    console.log(data)
     let n =0;
     data.forEach(e=>{
       n++;
